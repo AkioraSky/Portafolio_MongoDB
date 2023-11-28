@@ -46,20 +46,20 @@ const inputdetalle = document.getElementById("detalle");
       };
     return ( <>
     <main id="main">
-        <section class="inner-page">
-        <div className="container">
-            <div className="text-center mb-3" style={{color:"white"}}>
+        <section className="inner-page">
+        <div classNameName="container">
+            <div classNameName="text-center mb-3" style={{color:"white"}}>
 <h1>Agregar estudio</h1>
             </div>
-            <div className="row justify-content-center">
-            <div class="col">
+            <div classNameName="row justify-content-center">
+            <div className="col">
     
-    <form action="forms/contact.php" method="post" role="form" class="php-email-form"  onSubmit={AgregarEstudio}>
-      <div class="row" style={{color:"white"}} >
+    <form action="forms/contact.php" method="post" role="form" className="php-email-form"  onSubmit={AgregarEstudio}>
+      <div className="row" style={{color:"white"}} >
         <label htmlFor=""> Estudio</label>
       <select
                 name="tipo"
-                className="form-control form-control-"
+                classNameName="form-control form-control-"
                 id="tipo"
                 onChange={cambiar}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
@@ -71,19 +71,19 @@ const inputdetalle = document.getElementById("detalle");
                 <option value="MAESTRIA">Maestria</option>
                 <option value="DOCTORADO">Doctorado</option>
               </select>
-        <div class="form-group">
+        <div className="form-group">
           <label for="name">Detalle</label>
-          <input type="text" class="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
+          <input type="text" className="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
         </div>
-        <div class="form-group">
+        <div className="form-group">
         <label for="name">Fecha</label>
-        <input type="date" class="form-control" name="fecha" id="fecha" required onChange={cambiar}/>
+        <input type="date" className="form-control" name="fecha" id="fecha" required onChange={cambiar}/>
       </div>
-      <div class="form-group">
+      <div className="form-group">
       <label for="name">Estado</label>
       <select
                 name="notas"
-                className="form-control form-control-"
+                classNameName="form-control form-control-"
                 id="notas"
                 onChange={cambiar}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
@@ -94,7 +94,7 @@ const inputdetalle = document.getElementById("detalle");
                 <option value="DESERCION">Desercion</option>
               </select>
       </div>
-      <div className="form-group mt-4"><div class="text-center"><button type="submit" className="btn btn-success">Agregar</button></div>
+      <div classNameName="form-group mt-4"><div className="text-center"><button type="submit" classNameName="btn btn-success">Agregar</button></div>
       </div>
       </div>
       

@@ -37,7 +37,9 @@ const Navbar = () => {
       
 
 
-<i className="bi mobile-nav-toggle d-xl-none bi-x"></i>
+<i className="bi mobile-nav-toggle d-xl-none bi-x">
+  
+</i>
 
         <ul>
           <li>

@@ -4,8 +4,8 @@ const Cuerpo = () => {
   return (
     <>
       <main id="main">
-        <section class="inner-page">
-          <div class="container">
+        <section className="inner-page">
+          <div className="container">
           <p>Holaaa</p>
           </div>
         </section>
