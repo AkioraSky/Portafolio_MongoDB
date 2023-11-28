@@ -53,7 +53,9 @@ const ModalEditarEstu = ({
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Editar</Modal.Title>
+          <div className="form-group" style={{ marginLeft: "40%" }}>
+            <Modal.Title>Editar</Modal.Title>
+          </div>
         </Modal.Header>
         <Modal.Body>
           {" "}
@@ -64,7 +66,7 @@ const ModalEditarEstu = ({
               </label>
               <select
                 name="tipo"
-                className="form-control form-control-"
+                className="form-control form-control"
                 id="tipo"
                 onChange={cambiar}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
@@ -78,18 +80,11 @@ const ModalEditarEstu = ({
                 <option value="DOCTORADO">Doctorado</option>
               </select>
             </div>
+
             <div className="form-group">
-              <input
-                type="text"
-                className="form-control form-control-user"
-                id="exampleInputEmail"
-                name="detalle"
-                placeholder="Detalles"
-                onChange={cambiar}
-                defaultValue={detalle}
-              />
-            </div>
-            <div className="form-group">
+              <label htmlFor="" style={{ marginLeft: "40%" }}>
+                Fecha
+              </label>
               <input
                 type="date"
                 className="form-control form-control-user"
@@ -100,7 +95,7 @@ const ModalEditarEstu = ({
               />
             </div>
             <div className="form-group">
-              <label htmlFor="tipo" style={{ marginLeft: "45%" }}>
+              <label htmlFor="tipo" style={{ marginLeft: "40%" }}>
                 Notas
               </label>
               <select
@@ -117,13 +112,15 @@ const ModalEditarEstu = ({
                 <option value="DESERCION">Desercion</option>
               </select>
             </div>
-            <hr />
-            <button
-              type="submit"
-              className="btn btn-success btn-block"
-            >
-              Editar
-            </button>
+            <div className="form-group" style={{ marginLeft: "35%" }}>
+              <button
+                type="submit"
+                className="btn btn-success"
+                style={{ margin: "20px" }}
+              >
+                Editar
+              </button>
+            </div>
           </form>{" "}
         </Modal.Body>
       </Modal>

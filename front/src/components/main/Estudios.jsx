@@ -75,29 +75,6 @@ const Estudios = () => {
     } else {
       setEstudios(estudios.perfiles);
     }
-
-    /*   await fetch(Global.url + "estudios/listar/" + nextpages, {
-      method: "GET", // Método de solicitud (puede ser GET, POST, etc.)
-      headers: {
-        Authorization: `${token}`, // Incluye el token JWT en el encabezado Authorization
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        //console.log(data);
-        // Realiza alguna operación con los datos de la respuesta (data)
-        if (data.perfiles.length == 0) {
-          setEstudios(null);
-        } else {
-          setEstudios(data.perfiles);
-        }
-        //console.log("DATA PERFILES", data.perfiles);
-      })
-      .catch((error) => {
-        console.error("Error en la solicitud:", error);
-      });  */
   };
   const NextPage = () => {
     if (page >= totalp) {
@@ -131,107 +108,115 @@ const Estudios = () => {
   //console.log(JSON.stringify(request));
   //const data = request.json();
   //console.log(data);
-    return ( <>
-     <main id="main">
+  return (
+    <>
+      <main id="main">
         <section class="inner-page">
-        <div className="container-fluid">
-      <div className="row">
-        <div className="col-2"></div>
-        <div className="col-lg-8">
-          {estudios != null ? (
-            estudios.map((estudio) => {
-              return (
-                <div className="card mb-4 py-3 border-left-primary">
-                  <div className="card-body">
-                    <span style={{ fontWeight: "bold" }}>Tipo: </span>{" "}
-                    {estudio.tipo}
-                  </div>
-                  <hr />
-                  <div className="card-body">
-                    <span style={{ fontWeight: "bold" }}>Detalle: </span>{" "}
-                    {estudio.detalle}
-                  </div>
-                  <hr />
-                  <div className="card-body">
-                    {" "}
-                    <span style={{ fontWeight: "bold" }}>
-                      Fecha de finalizacion:
-                    </span>
-                    {estudio.fechaFin.slice(0, 10)}
-                  </div>
-                  <hr />
-                  <div className="card-body">
-                    {" "}
-                    <span style={{ fontWeight: "bold" }}>Notas: </span>{" "}
-                    {estudio.notas}
-                  </div>
-                  <hr />
-                  <h1 className="text-center">
-                    <button
-                      type="button"
-                      className="btn btn-danger"
-                      style={{ marginRight: "2%" }}
-                      onClick={() => {
-                        eliminarEstudio(estudio._id, estudio.detalle);
-                      }}
-                    >
-                      <i class="bi bi-trash3-fill"></i>
-                    </button>
-                    <button
-                      type="button"
-                      className="btn btn-warning"
-                      onClick={() => {
-                        setEditar(estudio._id);
-                        handleShow();
-                      }}
-                    >
-                      <i class="bi bi-pencil-square"></i>
-                    </button>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col"></div>
+              <div className="col-lg-8">
+                {estudios != null ? (
+                  estudios.map((estudio) => {
+                    return (
+                      <div className="card mb-4 py-3 border-left-primary">
+                        <div className="card-body">
+                          <span style={{ fontWeight: "bold" }}>Tipo: </span>{" "}
+                          {estudio.tipo}
+                        </div>
+                        <hr />
+                        <div className="card-body">
+                          <span style={{ fontWeight: "bold" }}>Detalle: </span>{" "}
+                          {estudio.detalle}
+                        </div>
+                        <hr />
+                        <div className="card-body">
+                          {" "}
+                          <span style={{ fontWeight: "bold" }}>
+                            Fecha de finalizacion:
+                          </span>
+                          {estudio.fechaFin.slice(0, 10)}
+                        </div>
+                        <hr />
+                        <div className="card-body">
+                          {" "}
+                          <span style={{ fontWeight: "bold" }}>
+                            Notas:{" "}
+                          </span>{" "}
+                          {estudio.notas}
+                        </div>
+                        <hr />
+                        <h1 className="text-center">
+                          <button
+                            type="button"
+                            className="btn btn-danger"
+                            style={{ marginRight: "2%" }}
+                            onClick={() => {
+                              eliminarEstudio(estudio._id, estudio.detalle);
+                            }}
+                          >
+                            <i class="bi bi-trash3-fill"></i>
+                          </button>
+                          <button
+                            type="button"
+                            className="btn btn-warning"
+                            onClick={() => {
+                              setEditar(estudio._id);
+                              handleShow();
+                            }}
+                          >
+                            <i class="bi bi-pencil-square"></i>
+                          </button>
+                        </h1>
+                        {Editar === estudio._id && (
+                          <ModalEditarEstu
+                            show={show}
+                            handleClose={handleClose}
+                            id={estudio._id}
+                            detalle={estudio.detalle}
+                            setEditar={setEditar}
+                            listarEstudios={listarEstudios}
+                          ></ModalEditarEstu>
+                        )}
+                      </div>
+                    );
+                  })
+                ) : (
+                  <h1 className="text-center" style={{ color: "White" }}>
+                    NO HAY ESTUDIOS DISPONIBLES
                   </h1>
-                  {Editar === estudio._id && (
-                     <ModalEditarEstu
-
-                      show={show}
-                      handleClose={handleClose}
-                      id={estudio._id}
-                      detalle={estudio.detalle}
-                      setEditar={setEditar}
-                      listarEstudios={listarEstudios}
-                    ></ModalEditarEstu>
-                  )}
-                </div>
-              );
-            })
-          ) : (
-            <h1 className="text-center">NO HAY ESTUDIOS DISPONIBLES</h1>
-          )}
-        </div>
-        <div className="col-2"></div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            
-            <li class="page-item">
-              <button id="anterior" onClick={AntPage} class="btn btn-primary">
-                Anterior
-              </button>
-            </li>
-            <li class="page-item">
-              <button
-                id="siguiente"
-                onClick={NextPage}
-                class="btn btn-success"
-                
-              >
-                Siguiente
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+                )}
+              </div>
+              <div className="col-2"></div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <button
+                      id="anterior"
+                      onClick={AntPage}
+                      class="btn btn-primary"
+                      style={{ marginRight: "10px" }}
+                    >
+                      Anterior
+                    </button>
+                  </li>
+                  <li class="page-item">
+                    <button
+                      id="siguiente"
+                      onClick={NextPage}
+                      class="btn btn-success"
+                    >
+                      Siguiente
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </section>
       </main>
-    </> );
-}
- 
+    </>
+  );
+};
+
 export default Estudios;

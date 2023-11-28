@@ -11,31 +11,30 @@ import CrearProyecto from "../components/main/CrearProyecto";
 import Estudios from "../components/main/Estudios";
 import CrearEstudio from "../components/main/CrearEstudio";
 //import NavBar from "../components/main/nav";
-import Inicio from "../components/main/inicio";
+
+import Proyectos from "../components/main/Proyectos";
 import { AuthProvider } from "../context/AuthProvider";
 
-const Routing = () =>{
+const Routing = () => {
   //Creacion del sistema de rutas
   return (
     <BrowserRouter>
-    <AuthProvider>
-      <Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<LayoutPublico />}>
+            <Route path="/login" element={<Login />} />
+            <Route index element={<Register />} />
+          </Route>
 
-        <Route path="/" element={<LayoutPublico />}>
-          <Route path="/login" element={<Login />} />
-          <Route index element={<Register />} />
-        </Route>
-
-        <Route path="/LayoutPrivado/" element={<LayoutPrivado />}>
-          <Route index element={<Inicio />} />
-          <Route path="Proyectos" element={<Proyecto />} />
-          <Route path="CrearProyecto" element={<CrearProyecto />} />
-          <Route path="Estudios" element={<Estudios />} />
-          <Route path="CrearEstudios" element={<CrearEstudio />} />
-        </Route>
-
-      </Routes>
-    </AuthProvider>      
+          <Route path="/LayoutPrivado/" element={<LayoutPrivado />}>
+            <Route index element={<Proyectos />} />
+            <Route path="Proyectos" element={<Proyecto />} />
+            <Route path="CrearProyecto" element={<CrearProyecto />} />
+            <Route path="Estudios" element={<Estudios />} />
+            <Route path="CrearEstudios" element={<CrearEstudio />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 };
