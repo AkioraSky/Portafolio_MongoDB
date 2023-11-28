@@ -47,11 +47,11 @@ const inputdetalle = document.getElementById("detalle");
     return ( <>
     <main id="main">
         <section className="inner-page">
-        <div classNameName="container">
-            <div classNameName="text-center mb-3" style={{color:"white"}}>
+        <div className="container">
+            <div className="text-center mb-3" style={{color:"white"}}>
 <h1>Agregar estudio</h1>
             </div>
-            <div classNameName="row justify-content-center">
+            <div className="row justify-content-center">
             <div className="col">
     
     <form action="forms/contact.php" method="post" role="form" className="php-email-form"  onSubmit={AgregarEstudio}>
@@ -59,7 +59,7 @@ const inputdetalle = document.getElementById("detalle");
         <label htmlFor=""> Estudio</label>
       <select
                 name="tipo"
-                classNameName="form-control form-control-"
+                className="form-control form-control-"
                 id="tipo"
                 onChange={cambiar}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
@@ -83,7 +83,7 @@ const inputdetalle = document.getElementById("detalle");
       <label for="name">Estado</label>
       <select
                 name="notas"
-                classNameName="form-control form-control-"
+                className="form-control form-control-"
                 id="notas"
                 onChange={cambiar}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
@@ -94,7 +94,8 @@ const inputdetalle = document.getElementById("detalle");
                 <option value="DESERCION">Desercion</option>
               </select>
       </div>
-      <div classNameName="form-group mt-4"><div className="text-center"><button type="submit" classNameName="btn btn-success">Agregar</button></div>
+      <div className="form-group mt-4">
+        <div className="text-center"><button type="submit" className="btn btn-success">Agregar</button></div>
       </div>
       </div>
       
