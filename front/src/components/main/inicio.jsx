@@ -1,13 +1,13 @@
 import React, { Component, useState, useEffect } from "react";
 
-import NavBar from "./nav";
+import Navbar from "./Navbar";
 import Cuerpo from "./cuerpo";
 
 const Inicio = () => {
   return (
     <>
       <div id="page-wraper">
-        <NavBar />
+        <Navbar/>
         <Cuerpo />
       </div>
     </>

@@ -30,7 +30,7 @@ const Login = () => {
       MySwal.fire({
         title: <strong> {titulo}</strong>,
         html: <i>{mensaje}</i>,
-        icon: "error",
+        icon: "success",
       });
       setTimeout(() => {
         window.location.reload();
@@ -46,7 +46,7 @@ const Login = () => {
       MySwal.fire({
         title: <strong> {titulo}</strong>,
         html: <i>{mensaje}</i>,
-        icon: "success",
+        icon: "error",
       });
     }
   };

@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Login from "../components/public/login";
 import Register from "../components/public/register";
 import LayoutPublico from "../components/public/layoutPublico";
-import Header from "../components/public/Header";
+
 import LayoutPrivado from "../components/main/layoutPrivado";
 //import NavBar from "../components/main/nav";
 import Inicio from "../components/main/inicio";
@@ -18,9 +18,8 @@ const Routing = () =>{
       <Routes>
 
         <Route path="/" element={<LayoutPublico />}>
-         <Route index element={<Header />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route index element={<Register />} />
         </Route>
 
         <Route path="/MyPortafolio/" element={<LayoutPrivado />}>
