@@ -54,7 +54,7 @@ const inputdetalle = document.getElementById("detalle");
             <div className="row justify-content-center">
             <div class="col">
     
-    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+    <form action="forms/contact.php" method="post" role="form" class="php-email-form"  onSubmit={AgregarEstudio}>
       <div class="row" style={{color:"white"}} >
         <label htmlFor=""> Estudio</label>
       <select
@@ -73,7 +73,7 @@ const inputdetalle = document.getElementById("detalle");
               </select>
         <div class="form-group">
           <label for="name">Detalle</label>
-          <input type="email" class="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
+          <input type="text" class="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
         </div>
         <div class="form-group">
         <label for="name">Fecha</label>

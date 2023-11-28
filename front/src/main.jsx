@@ -39,7 +39,7 @@ import "./css/login.css";
 import"./css/style.css";
 
 //js
-// import "./js/main.js";
+//import "./js/main.js";
 
 //import "./css/flex-slider.css";
 //import "./css/lightbox.css";

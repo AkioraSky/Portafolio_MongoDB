@@ -18,26 +18,31 @@ const Navbar = () => {
     const nombreuser = userObj.nombre;
     const { Autenticado } = useAuth();
     return ( <>
-    <header id="header">
-    <div class="d-flex flex-column">
+    <header id="header" className="mobile-nav-active">
+    <div className="d-flex flex-column">
 
-      <div class="profile">
-        <img src="../../src/assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"/>
-        <h1 class="text-light"><a href="index.html"> {Autenticado.nombre} {Autenticado.apellidos}</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div className="profile">
+        <img src="../../src/assets/img/profile-img.jpg" alt="" className="img-fluid rounded-circle"/>
+        <h1 className="text-light"><a href="index.html"> {Autenticado.nombre} {Autenticado.apellidos}</a></h1>
+        <div className="social-links mt-3 text-center">
+          <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
+          <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
+          <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
+          <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
+          <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
       <nav id="navbar" className="nav-menu navbar">
+      
+
+
+<i className="bi mobile-nav-toggle d-xl-none bi-x"></i>
+
         <ul>
           <li>
           <NavLink to="/layoutPrivado/Proyectos">
-            <a  className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Proyectos</span></a>
+            <a  className="nav-link scrollto"><i className="bx bx-home"></i> <span>Proyectos</span></a>
             </NavLink>
             </li>
           <li>
