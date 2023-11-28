@@ -22,7 +22,7 @@ const Navbar = () => {
 
       <div class="profile">
         <img src="../../src/assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"/>
-        <h1 class="text-light"><a href="index.html">Aca va el nombre</a></h1>
+        <h1 class="text-light"><a href="index.html"> {Autenticado.nombre} {Autenticado.apellidos}</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
