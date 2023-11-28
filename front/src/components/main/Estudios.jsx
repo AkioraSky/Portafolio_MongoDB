@@ -3,7 +3,7 @@ import HelperForm from "../../helpers/HelperForm";
 import { Global } from "../../helpers/Global";
 import Swal2 from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-//import ModalEditarEstu from "./EditarEstuPrub";
+import ModalEditar from "./EditarEstuPrub";
 //import { editar } from "../../../../back/controllers/proyectos";
 
 const MySwal = withReactContent(Swal2);
