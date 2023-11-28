@@ -120,7 +120,7 @@ const ModalEditarEstu = ({
             <hr />
             <button
               type="submit"
-              className="btn btn-facebook btn-user btn-block"
+              className="btn btn-success btn-block"
             >
               Editar
             </button>
