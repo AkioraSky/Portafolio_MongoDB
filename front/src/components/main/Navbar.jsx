@@ -37,28 +37,28 @@ const Navbar = () => {
         <ul>
           <li>
           <NavLink to="/layoutPrivado/Proyectos">
-            <a href="#hero" className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Proyectos</span></a>
+            <a  className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Proyectos</span></a>
             </NavLink>
             </li>
           <li>
           <NavLink to="/layoutPrivado/CrearProyecto">
-            <a href="#about" className="nav-link scrollto"><i className="bx bx-user"></i> <span>Crear Proyectos</span></a>
+            <a  className="nav-link scrollto"><i className="bx bx-user"></i> <span>Crear Proyectos</span></a>
             </NavLink>
             </li>
            
           <li>
           <NavLink to="/layoutPrivado/Estudios">
-            <a href="#resume" className="nav-link scrollto"><i className="bx bx-file-blank"></i> <span>Estudios</span></a>
+            <a  className="nav-link scrollto"><i className="bx bx-file-blank"></i> <span>Estudios</span></a>
             </NavLink>
             </li>
           <li>
           <NavLink to="/layoutPrivado/CrearEstudios">
-            <a href="#portfolio" className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>Crear Estudios</span></a>
+            <a  className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>Crear Estudios</span></a>
             </NavLink>
             </li>
           <li>
           <NavLink to="/">
-            <a href="#services" className="nav-link scrollto"><i className="bx bx-server"></i> <span>Salir</span></a>
+            <a className="nav-link scrollto"><i className="bx bx-server"></i> <span>Salir</span></a>
             </NavLink>
             </li>
          
