@@ -10,13 +10,13 @@ const CrearProyecto = () => {
 const inputdetalle = document.getElementById("detalle");
 const { form, cambiar } = HelperForm({});
 const token = localStorage.getItem("token");
-  const AgregarEstudio = async (e) => {
+  const AgregarProyecto = async (e) => {
       e.preventDefault();
       let formulario = form;
   
       //guardar en la api
   
-      const request = await fetch(Global.url + "estudios/crearEstudio", {
+      const request = await fetch(Global.url + "proyectos/crear", {
         method: "POST",
         body: JSON.stringify(formulario),
         headers: {
@@ -55,46 +55,22 @@ const token = localStorage.getItem("token");
             <div className="row justify-content-center">
             <div className="col">
     
-    <form action="forms/contact.php" method="post" role="form" className="php-email-form"  onSubmit={AgregarEstudio}>
+    <form action="forms/contact.php" method="post" role="form" className="php-email-form"  onSubmit={AgregarProyecto}>
       <div className="row" style={{color:"white"}} >
-        <label htmlFor=""> Estudio</label>
-      <select
-                name="tipo"
-                className="form-control form-control-"
-                id="tipo"
-                onChange={cambiar}
-                style={{ borderRadius: "50px", fontSize: "100%" }}
-              >
-                <option value="TECNICO">Tecnico</option>
-                <option value="TECNOLOGO">Tecnologo</option>
-                <option value="PROFESIONAL">Profesional</option>
-                <option value="ESPECIALIZACION">Especializacion</option>
-                <option value="MAESTRIA">Maestria</option>
-                <option value="DOCTORADO">Doctorado</option>
-              </select>
+        
+        <div className="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" className="form-control" name="nombre" id="nombre" required onChange={cambiar}/>
+        </div>
         <div className="form-group">
           <label for="name">Detalle</label>
           <input type="text" className="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
         </div>
         <div className="form-group">
-        <label for="name">Fecha</label>
-        <input type="date" className="form-control" name="fecha" id="fecha" required onChange={cambiar}/>
+        <label for="name">Link</label>
+        <input type="text" className="form-control" name="link" id="link" required onChange={cambiar}/>
       </div>
-      <div className="form-group">
-      <label for="name">Estado</label>
-      <select
-                name="notas"
-                className="form-control form-control-"
-                id="notas"
-                onChange={cambiar}
-                style={{ borderRadius: "50px", fontSize: "100%" }}
-              >
-                <option value="APROBADO">Aprobado</option>
-                <option value="NO APROBADO">No Aprobado</option>
-                <option value="EN PROCESO">En Proceso</option>
-                <option value="DESERCION">Desercion</option>
-              </select>
-      </div>
+
       <div className="form-group mt-4">
         <div className="text-center"><button type="submit" className="btn btn-success">Agregar</button></div>
       </div>
