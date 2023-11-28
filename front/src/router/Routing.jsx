@@ -6,6 +6,10 @@ import Register from "../components/public/register";
 import LayoutPublico from "../components/public/layoutPublico";
 
 import LayoutPrivado from "../components/main/layoutPrivado";
+import Proyecto from "../components/main/Proyectos";
+import CrearProyecto from "../components/main/CrearProyecto";
+import Estudios from "../components/main/Estudios";
+import CrearEstudio from "../components/main/CrearEstudio";
 //import NavBar from "../components/main/nav";
 import Inicio from "../components/main/inicio";
 import { AuthProvider } from "../context/AuthProvider";
@@ -24,6 +28,10 @@ const Routing = () =>{
 
         <Route path="/LayoutPrivado/" element={<LayoutPrivado />}>
           <Route index element={<Inicio />} />
+          <Route path="Proyectos" element={<Proyecto />} />
+          <Route path="CrearProyecto" element={<CrearProyecto />} />
+          <Route path="Estudios" element={<Estudios />} />
+          <Route path="CrearEstudios" element={<CrearEstudio />} />
         </Route>
 
       </Routes>
