@@ -6,7 +6,7 @@ const Cuerpo = () => {
       <main id="main">
         <section class="inner-page">
           <div class="container">
-          
+          <p>Holaaa</p>
           </div>
         </section>
       </main>
