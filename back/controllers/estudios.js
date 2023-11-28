@@ -26,7 +26,7 @@ const crearEstudio = async (req, res) => {
     return res.status(400).send({
       id: 400,
       Encabezado: "Error",
-      mensaje: "Error de Consulta: " + error.message,
+      mensaje: "Error de Consulta: " + error.message,w
     });
   }
 };
