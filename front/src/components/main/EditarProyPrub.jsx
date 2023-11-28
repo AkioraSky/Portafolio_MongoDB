@@ -62,6 +62,9 @@ const ModalEditar = ({
           <form className="user" onSubmit={Editar}>
             <div className="form-group">
               <div className="form-group">
+                <label htmlFor="" style={{ margin: "10px" }}>
+                  Nombre
+                </label>
                 <input
                   type="text"
                   className="form-control form-control-user"
@@ -74,6 +77,9 @@ const ModalEditar = ({
               </div>
             </div>
             <div className="form-group">
+              <label htmlFor="" style={{ margin: "10px" }}>
+                Detalle
+              </label>
               <input
                 type="text"
                 className="form-control form-control-user"
@@ -85,6 +91,9 @@ const ModalEditar = ({
               />
             </div>
             <div className="form-group">
+              <label htmlFor="" style={{ margin: "10px" }}>
+                Link
+              </label>
               <input
                 type="text"
                 className="form-control form-control-user"
@@ -95,14 +104,15 @@ const ModalEditar = ({
                 defaultValue={link}
               />
             </div>
-
-            <hr />
-            <button
-              type="submit"
-              className="btn btn-facebook btn-user btn-block"
-            >
-              Editar
-            </button>
+            <div className="form-group" style={{ marginLeft: "35%" }}>
+              <button
+                type="submit"
+                className="btn btn-success"
+                style={{ margin: "20px" }}
+              >
+                Editar
+              </button>
+            </div>
           </form>{" "}
         </Modal.Body>
       </Modal>

@@ -188,7 +188,7 @@ const Proyectos = () => {
                   );
                 })
               ) : (
-                <h1 style={{ textAlign: "center" }}>
+                <h1 style={{ textAlign: "center", color: "White" }}>
                   NO HAY PROYECTOS DISPONIBLES
                 </h1>
               )}
@@ -197,7 +197,12 @@ const Proyectos = () => {
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item">
-                  <button id="anterior" onClick={AntPage} class="page-link">
+                  <button
+                    id="anterior"
+                    onClick={AntPage}
+                    class="btn btn-primary"
+                    style={{ marginRight: "10px" }}
+                  >
                     Anterior
                   </button>
                 </li>
@@ -205,8 +210,7 @@ const Proyectos = () => {
                   <button
                     id="siguiente"
                     onClick={NextPage}
-                    class="page-link"
-                    href="#"
+                    class="btn btn-success"
                   >
                     Siguiente
                   </button>
