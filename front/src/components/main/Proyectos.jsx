@@ -123,105 +123,100 @@ const Proyectos = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-
-
-<main id="main">
-        <section class="inner-page">
-           <div className="container-fluid">
-      <div className="row">
-        <div className="col-2"></div>
-        <div className="col-lg-8">
-          {proyectos != null ? (
-            proyectos.map((proyecto) => {
-              return (
-                <div
-                  className="card mb-4 py-3 border-left-primary"
-                  key={proyecto._id}
-                >
-                  <div className="card-body">
-                    <span style={{ fontWeight: "bold" }}>Nombre: </span>
-                    {proyecto.nombre}
-                  </div>
-                  <hr />
-                  <div className="card-body">
-                    <span style={{ fontWeight: "bold" }}>Detalle: </span>{" "}
-                    {proyecto.detalle}
-                  </div>
-                  <hr />
-                  <div className="card-body">
-                    <span style={{ fontWeight: "bold" }}>Link: </span>
-                    {proyecto.link}
-                  </div>
-                  <h1 className="text-center">
-                    <button
-                      type="button"
-                      className="btn btn-danger"
-                      style={{ marginRight: "2%" }}
-                      onClick={() => {
-                        eliminarProyecto(proyecto._id, proyecto.nombre);
-                      }}
+    <main id="main">
+      <section class="inner-page">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-2"></div>
+            <div className="col-lg-8">
+              {proyectos != null ? (
+                proyectos.map((proyecto) => {
+                  return (
+                    <div
+                      className="card mb-4 py-3 border-left-primary"
+                      key={proyecto._id}
                     >
-                      <i className="bi bi-trash3-fill"></i>
-                    </button>
-                    <button
-                      type="button"
-                      className="btn btn-warning"
-                      onClick={() => {
-                        setEditar(proyecto._id);
-                        handleShow();
-                      }}
-                    >
-                      <i className="bi bi-pencil-square"></i>
-                    </button>
-                  </h1>
-                  {Editar === proyecto._id && (
-                    <ModalEditar
-                      show={show}
-                      handleClose={handleClose}
-                      id={proyecto._id}
-                      nombre={proyecto.nombre}
-                      descripcion={proyecto.detalle}
-                      link={proyecto.link}
-                      setEditar={setEditar}
-                      listarProyectos={listarProyectos}
-                    ></ModalEditar>
-                  )}
-                </div>
-              );
-            })
-          ) : (
-            <h1 style={{ textAlign: "center" }}>
-              NO HAY PROYECTOS DISPONIBLES
-            </h1>
-          )}
+                      <div className="card-body">
+                        <span style={{ fontWeight: "bold" }}>Nombre: </span>
+                        {proyecto.nombre}
+                      </div>
+                      <hr />
+                      <div className="card-body">
+                        <span style={{ fontWeight: "bold" }}>Detalle: </span>{" "}
+                        {proyecto.detalle}
+                      </div>
+                      <hr />
+                      <div className="card-body">
+                        <span style={{ fontWeight: "bold" }}>Link: </span>
+                        {proyecto.link}
+                      </div>
+                      <h1 className="text-center">
+                        <button
+                          type="button"
+                          className="btn btn-danger"
+                          style={{ marginRight: "2%" }}
+                          onClick={() => {
+                            eliminarProyecto(proyecto._id, proyecto.nombre);
+                          }}
+                        >
+                          <i className="bi bi-trash3-fill"></i>
+                        </button>
+                        <button
+                          type="button"
+                          className="btn btn-warning"
+                          onClick={() => {
+                            setEditar(proyecto._id);
+                            handleShow();
+                          }}
+                        >
+                          <i className="bi bi-pencil-square"></i>
+                        </button>
+                      </h1>
+                      {Editar === proyecto._id && (
+                        <ModalEditar
+                          show={show}
+                          handleClose={handleClose}
+                          id={proyecto._id}
+                          nombre={proyecto.nombre}
+                          descripcion={proyecto.detalle}
+                          link={proyecto.link}
+                          setEditar={setEditar}
+                          listarProyectos={listarProyectos}
+                        ></ModalEditar>
+                      )}
+                    </div>
+                  );
+                })
+              ) : (
+                <h1 style={{ textAlign: "center" }}>
+                  NO HAY PROYECTOS DISPONIBLES
+                </h1>
+              )}
+            </div>
+            <div className="col-2"></div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <button id="anterior" onClick={AntPage} class="page-link">
+                    Anterior
+                  </button>
+                </li>
+                <li class="page-item">
+                  <button
+                    id="siguiente"
+                    onClick={NextPage}
+                    class="page-link"
+                    href="#"
+                  >
+                    Siguiente
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div className="col-2"></div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item">
-              <button id="anterior" onClick={AntPage} class="page-link">
-                Anterior
-              </button>
-            </li>
-            <li class="page-item">
-              <button
-                id="siguiente"
-                onClick={NextPage}
-                class="page-link"
-                href="#"
-              >
-                Siguiente
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-        </section>
-
-</main>
-
-   
+      </section>
+    </main>
   );
 };
 
