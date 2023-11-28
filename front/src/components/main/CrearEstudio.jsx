@@ -45,50 +45,71 @@ const inputdetalle = document.getElementById("detalle");
         }
       };
     return ( <>
+    <main id="main">
+        <section class="inner-page">
+        <div className="container">
+            <div className="text-center mb-3" style={{color:"white"}}>
+<h1>Agregar estudio</h1>
+            </div>
+            <div className="row justify-content-center">
+            <div class="col">
+    
+    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+      <div class="row" style={{color:"white"}} >
+        <label htmlFor=""> Estudio</label>
+      <select
+                name="tipo"
+                className="form-control form-control-"
+                id="tipo"
+                onChange={cambiar}
+                style={{ borderRadius: "50px", fontSize: "100%" }}
+              >
+                <option value="TECNICO">Tecnico</option>
+                <option value="TECNOLOGO">Tecnologo</option>
+                <option value="PROFESIONAL">Profesional</option>
+                <option value="ESPECIALIZACION">Especializacion</option>
+                <option value="MAESTRIA">Maestria</option>
+                <option value="DOCTORADO">Doctorado</option>
+              </select>
+        <div class="form-group">
+          <label for="name">Detalle</label>
+          <input type="email" class="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
+        </div>
+        <div class="form-group">
+        <label for="name">Fecha</label>
+        <input type="date" class="form-control" name="fecha" id="fecha" required onChange={cambiar}/>
+      </div>
+      <div class="form-group">
+      <label for="name">Estado</label>
+      <select
+                name="notas"
+                className="form-control form-control-"
+                id="notas"
+                onChange={cambiar}
+                style={{ borderRadius: "50px", fontSize: "100%" }}
+              >
+                <option value="APROBADO">Aprobado</option>
+                <option value="NO APROBADO">No Aprobado</option>
+                <option value="EN PROCESO">En Proceso</option>
+                <option value="DESERCION">Desercion</option>
+              </select>
+      </div>
+      <div className="form-group mt-4"><div class="text-center"><button type="submit" className="btn btn-success">Agregar</button></div>
+      </div>
+      </div>
+      
+      
+    </form>
+  </div>
+            </div>
 
-<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-              <select
-                        name="tipo"
-                        className="form-group col-md-6"
-                        id="tipo"
-                        onChange={cambiar}
-                        style={{ borderRadius: "50px", fontSize: "100%" }}
-                      >
-                        <option value="TECNICO">Tecnico</option>
-                        <option value="TECNOLOGO">Tecnologo</option>
-                        <option value="PROFESIONAL">Profesional</option>
-                        <option value="ESPECIALIZACION">Especializacion</option>
-                        <option value="MAESTRIA">Maestria</option>
-                        <option value="DOCTORADO">Doctorado</option>
-                      </select>
-                <div class="form-group col-md-6">
-                  <label for="name">Detalle</label>
-                  <input type="email" class="form-control" name="detalle" id="detalle" required onChange={cambiar}/>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Fecha</label>
-                <input type="date" class="form-control" name="fecha" id="fecha" required onChange={cambiar}/>
-              </div>
-              <div class="form-group">
-              <select
-                        name="notas"
-                        className="form-control form-control-"
-                        id="notas"
-                        onChange={cambiar}
-                        style={{ borderRadius: "50px", fontSize: "100%" }}
-                      >
-                        <option value="APROBADO">Aprobado</option>
-                        <option value="NO APROBADO">No Aprobado</option>
-                        <option value="EN PROCESO">En Proceso</option>
-                        <option value="DESERCION">Desercion</option>
-                      </select>
-              </div>
-              <div class="text-center"><button type="submit" className="btn btn-success">Agregar</button></div>
-            </form>
-          </div>
+</div>
+        </section>
+      </main>
+
+    
+
+
 
     </> );
 }
