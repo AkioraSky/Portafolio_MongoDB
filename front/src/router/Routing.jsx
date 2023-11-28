@@ -22,7 +22,7 @@ const Routing = () =>{
           <Route index element={<Register />} />
         </Route>
 
-        <Route path="/MyPortafolio/" element={<LayoutPrivado />}>
+        <Route path="/LayoutPrivado/" element={<LayoutPrivado />}>
           <Route index element={<Inicio />} />
         </Route>
 

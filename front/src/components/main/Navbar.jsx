@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { NavLink } from "react-router-dom";
 import HelperForm from "../../helpers/HelperForm";
 import { Global } from "../../helpers/Global";
 import Swal2 from "sweetalert2";
@@ -34,11 +35,32 @@ const Navbar = () => {
 
       <nav id="navbar" className="nav-menu navbar">
         <ul>
-          <li><a href="#hero" className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Proyectos</span></a></li>
-          <li><a href="#about" className="nav-link scrollto"><i className="bx bx-user"></i> <span>Crear Proyectos</span></a></li>
-          <li><a href="#resume" className="nav-link scrollto"><i className="bx bx-file-blank"></i> <span>Estudios</span></a></li>
-          <li><a href="#portfolio" className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>Crear Estudios</span></a></li>
-          <li><a href="#services" className="nav-link scrollto"><i className="bx bx-server"></i> <span>Salir</span></a></li>
+          <li>
+          <NavLink to="/layoutPrivado/Proyectos">
+            <a href="#hero" className="nav-link scrollto active"><i className="bx bx-home"></i> <span>Proyectos</span></a>
+            </NavLink>
+            </li>
+          <li>
+          <NavLink to="/layoutPrivado/CrearProyecto">
+            <a href="#about" className="nav-link scrollto"><i className="bx bx-user"></i> <span>Crear Proyectos</span></a>
+            </NavLink>
+            </li>
+           
+          <li>
+          <NavLink to="/layoutPrivado/Estudios">
+            <a href="#resume" className="nav-link scrollto"><i className="bx bx-file-blank"></i> <span>Estudios</span></a>
+            </NavLink>
+            </li>
+          <li>
+          <NavLink to="/layoutPrivado/CrearEstudios">
+            <a href="#portfolio" className="nav-link scrollto"><i className="bx bx-book-content"></i> <span>Crear Estudios</span></a>
+            </NavLink>
+            </li>
+          <li>
+          <NavLink to="/">
+            <a href="#services" className="nav-link scrollto"><i className="bx bx-server"></i> <span>Salir</span></a>
+            </NavLink>
+            </li>
          
         </ul>
       </nav>

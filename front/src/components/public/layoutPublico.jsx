@@ -9,7 +9,7 @@ const LayaoutPublico = () => {
       {!Autenticado._id ? (
         <Outlet></Outlet>
       ) : (
-        <Navigate to={"/MyPortafolio"}></Navigate>
+        <Navigate to={"/LayoutPrivado"}></Navigate>
       )}
     </>
   );
