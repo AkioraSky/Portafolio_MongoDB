@@ -123,7 +123,11 @@ const Proyectos = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="container-fluid">
+
+
+<main id="main">
+        <section class="inner-page">
+           <div className="container-fluid">
       <div className="row">
         <div className="col-2"></div>
         <div className="col-lg-8">
@@ -213,6 +217,11 @@ const Proyectos = () => {
         </nav>
       </div>
     </div>
+        </section>
+
+</main>
+
+   
   );
 };
 
