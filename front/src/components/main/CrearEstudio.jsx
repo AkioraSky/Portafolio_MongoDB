@@ -77,7 +77,7 @@ const inputdetalle = document.getElementById("detalle");
         </div>
         <div className="form-group">
         <label for="name">Fecha</label>
-        <input type="date" className="form-control" name="fecha" id="fecha" required onChange={cambiar}/>
+        <input type="date" className="form-control" name="fechaFin" id="fechaFin" onChange={cambiar}/>
       </div>
       <div className="form-group">
       <label for="name">Estado</label>
