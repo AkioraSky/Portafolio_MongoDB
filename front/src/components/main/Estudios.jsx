@@ -173,7 +173,10 @@ const Estudios = () => {
                             show={show}
                             handleClose={handleClose}
                             id={estudio._id}
+                            tipo={estudio.tipo}
                             detalle={estudio.detalle}
+                            fecha={estudio.fechaFin.slice(0, 10)}
+                            notas={estudio.notas}
                             setEditar={setEditar}
                             listarEstudios={listarEstudios}
                           ></ModalEditarEstu>

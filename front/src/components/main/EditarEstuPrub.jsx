@@ -11,7 +11,10 @@ const ModalEditarEstu = ({
   show,
   handleClose,
   id,
+  tipo,
   detalle,
+  fecha,
+  notas,
   setEditar,
   listarEstudios,
 }) => {
@@ -69,6 +72,7 @@ const ModalEditarEstu = ({
                 className="form-control form-control"
                 id="tipo"
                 onChange={cambiar}
+                defaultValue={tipo}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
               >
                 <option value="N/A">Selecciona una opcion: </option>
@@ -86,12 +90,28 @@ const ModalEditarEstu = ({
                 Fecha
               </label>
               <input
+                type="text"
+                className="form-control form-control-user"
+                id="exampleInputEmail"
+                placeholder="Detalle"
+                name="fechaFin"
+                onChange={cambiar}
+                defaultValue={detalle}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="" style={{ marginLeft: "40%" }}>
+                Fecha
+              </label>
+              <input
                 type="date"
                 className="form-control form-control-user"
                 id="exampleInputEmail"
                 placeholder="Detalles"
                 name="fechaFin"
                 onChange={cambiar}
+                defaultValue={fecha}
               />
             </div>
             <div className="form-group">
@@ -103,6 +123,7 @@ const ModalEditarEstu = ({
                 className="form-control form-control-"
                 id="notas"
                 onChange={cambiar}
+                defaultValue={notas}
                 style={{ borderRadius: "50px", fontSize: "100%" }}
               >
                 <option value="N/A">Selecciona alguna Nota: </option>

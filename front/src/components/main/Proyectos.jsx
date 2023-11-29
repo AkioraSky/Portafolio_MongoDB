@@ -146,9 +146,16 @@ const Proyectos = () => {
                         {proyecto.detalle}
                       </div>
                       <hr />
-                      <div className="card-body">
+{/*                       <div className="card-body">
                         <span style={{ fontWeight: "bold" }}>Link: </span>
                         {proyecto.link}
+                      </div> */}
+
+                      <div className="card-body">
+                        <span style={{ fontWeight: "bold" }}>Link:  <a href={proyecto.link} >
+                          {proyecto.link}
+                        </a> </span>
+                        
                       </div>
                       <h1 className="text-center">
                         <button
