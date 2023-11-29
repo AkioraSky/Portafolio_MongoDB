@@ -30,7 +30,7 @@ body {
   top: -80px;
 }
 .shape:last-child {
-  background: linear-gradient(to right, #ff512f, #f09819);
+  background: linear-gradient(to right, #2fe7ff, #5219f0);
   right: -80px;
   bottom: -80px;
 }
@@ -132,7 +132,7 @@ label {
 }
 
 .formLog {
-  height: 63%;
+  height: 40%;
   width: 40%;
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
@@ -162,7 +162,7 @@ label {
 }
 
 .formRes {
-  height: 75%;
+  height: 55%;
   width: 60%;
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
