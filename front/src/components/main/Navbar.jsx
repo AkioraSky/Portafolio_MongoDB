@@ -64,7 +64,7 @@ const Navbar = () => {
             </NavLink>
             </li>
           <li>
-          <NavLink to="/">
+          <NavLink to="/layoutPrivado/Salir">
             <a className="nav-link scrollto"><i className="bx bx-server"></i> <span>Salir</span></a>
             </NavLink>
             </li>

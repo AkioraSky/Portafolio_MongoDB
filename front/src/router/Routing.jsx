@@ -10,6 +10,7 @@ import Proyecto from "../components/main/Proyectos";
 import CrearProyecto from "../components/main/CrearProyecto";
 import Estudios from "../components/main/Estudios";
 import CrearEstudio from "../components/main/CrearEstudio";
+import Salir from "../components/main/Salir";
 //import NavBar from "../components/main/nav";
 
 import Proyectos from "../components/main/Proyectos";
@@ -32,6 +33,7 @@ const Routing = () => {
             <Route path="CrearProyecto" element={<CrearProyecto />} />
             <Route path="Estudios" element={<Estudios />} />
             <Route path="CrearEstudios" element={<CrearEstudio />} />
+            <Route path="Salir" element={<Salir></Salir>}></Route>
           </Route>
         </Routes>
       </AuthProvider>
