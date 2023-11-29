@@ -6,11 +6,17 @@ const Salir = () => {
     const { setAutenticado } = UseAuth();
   const Navigate = useNavigate();
   useEffect(() => {
+
+
+
+
+
     localStorage.clear();
     setAutenticado({});
     Navigate("/");
+    window.location.reload();
     return (  <>
-      <h1>Cerrando sesion .....</h1>
+      <h1>Saliendo</h1>
     </>
     );
   })

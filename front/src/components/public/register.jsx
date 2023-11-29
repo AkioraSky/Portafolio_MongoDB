@@ -144,15 +144,6 @@ const Register = () => {
                 id="telefono"
                 name="telefono"
               />
-
-              <label className="lbRes" htmlFor="password">Foto</label>
-              <input
-                disabled
-                className="ftU form-control mt-2"
-                type="file"
-                id="formFileMultiple"
-                placeholder="Foto"
-              />
             </div>
           </div>
 
