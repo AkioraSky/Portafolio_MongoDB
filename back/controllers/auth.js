@@ -8,7 +8,7 @@ const auth = (req, res, next) => {
   if (!jwtToken) {
     return res.status(400).send({
       resultado: "error",
-      mensaje: "Acceso denegado, No tiene token un valido",
+      mensaje: "Acceso denegado, No tiene token valido",
     });
   }
   try {
